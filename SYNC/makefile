@@ -1,4 +1,4 @@
-CC=gcc -pthread
+CC= gcc -pthread
 
 all: q1_1 q1_2 q2_1 q2_2 q3_1 q3_2
 

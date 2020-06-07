@@ -41,20 +41,20 @@ void test(int phnum)
 
             if (fork_arr[RIGHT] == checkingPhnum && fork_arr[LEFT] == checkingPhnum)
             {
-                    // state that eating
-                    state[phnum] = EATING;
-                    sleep(2);
+                // state that eating
+                state[phnum] = EATING;
+                sleep(2);
 
-                    printf("Philosopher %d takes fork %d and %d\n",
-                           phnum + 1, LEFT + 1, phnum + 1);
+                printf("Philosopher %d takes fork %d and %d\n",
+                       phnum + 1, LEFT + 1, phnum + 1);
 
-                    printf("Philosopher %d is Eating\n", phnum + 1);
+                printf("Philosopher %d is Eating\n", phnum + 1);
 
-                    // sem_post(&S[phnum]) has no effect
-                    // during takefork
-                    // used to wake up hungry philosophers
-                    // during putfork
-                    sem_post(&S[phnum]);
+                // sem_post(&S[phnum]) has no effect
+                // during takefork
+                // used to wake up hungry philosophers
+                // during putfork
+                sem_post(&S[phnum]);
             }
             sem_post(&S[phnum]);
         }

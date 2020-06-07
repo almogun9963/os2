@@ -4,7 +4,6 @@
 
 /*
 there is connection between starving and livelock
-same code as 2_2_2
 */
 
 #include <pthread.h>
